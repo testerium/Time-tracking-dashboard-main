@@ -1,0 +1,180 @@
+@use './variables.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $blue_very_dark;
+    font-family: 'Rubik';
+    font-style: normal;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .box {
+        width: 255px;
+        height: 199px;
+        background: $blue_dark;
+        border-radius: 15px;
+        color: $white;
+        text-align: left;
+        margin-top: 45px;
+        margin-bottom: 0;
+
+        .activity {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 29px 35px 24px 30px;
+            background-color: $blue_dark;
+            border-radius: 15px;
+
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: $white;
+            }
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 56px;
+            line-height: 66px;
+            color: $white;
+        }
+
+    }
+
+    .box_big {
+        background: $blue_dark;
+        border-radius: 15px;
+        grid-row-start: 1;
+        grid-row-end: -5;
+        height: 518px;
+
+        .name_container {
+            width: 255px;
+            height: 354px;
+            background: $blue;
+            border-radius: 15px;
+            padding: 37px 84px 80px 32px;
+
+            img {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                padding-bottom: 43px;
+            }
+
+            h1 {
+                font-weight: 300;
+                font-size: 40px;
+                line-height: 47px;
+                color: $white;
+            }
+
+            span {
+                padding: 43px auto 3px auto;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $blue_pale;
+            }
+        }
+
+        .frequency_container {
+            width: 68px;
+            height: 106px;
+            padding: 26px 155px 33px 32px;
+
+            li {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                list-style: none;
+                color: $desaturated_blue;
+                padding-bottom: 21px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .box1 {
+        background-image: url(../images/icon-work.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $red_light_work;
+        border-radius: 20px;
+    }
+
+    .box2 {
+        background-image: url(../images/icon-play.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $blue_soft_play;
+        border-radius: 20px;
+    }
+
+    .box3 {
+        background-image: url(../images/icon-study.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $red_light_study;
+        border-radius: 20px;
+    }
+
+    .box4 {
+        background-image: url(../images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $lime_green_exercise;
+        border-radius: 20px;
+    }
+
+    .box5 {
+        background-image: url(../images/icon-social.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $violet_social;
+        border-radius: 20px;
+    }
+
+    .box6 {
+        background-image: url(../images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $orange_soft_self_care;
+        border-radius: 20px;
+    }
+
+
+    .time {
+        display: none;
+        padding-left: 32px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $white;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
