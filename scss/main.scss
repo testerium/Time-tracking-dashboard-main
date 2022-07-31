@@ -33,7 +33,7 @@ body {
         margin-top: 45px;
         margin-bottom: 0;
 
-        .activity {
+        .title {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -49,7 +49,7 @@ body {
             }
         }
 
-        h2 {
+        h3 {
             font-weight: 300;
             font-size: 56px;
             line-height: 66px;
@@ -98,7 +98,7 @@ body {
             height: 106px;
             padding: 26px 155px 33px 32px;
 
-            li {
+            .frequency__option {
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 21px;
@@ -108,11 +108,16 @@ body {
 
                 &:hover {
                     cursor: pointer;
-                    color: #FFFFFF;
+                    color: $white;
                 }
+            }
+
+            .active {
+                color: $white;
             }
         }
     }
+
 
     .box1 {
         background-image: url(../images/icon-work.svg);
@@ -164,8 +169,23 @@ body {
 
 
     .time {
-        display: none;
         padding-left: 32px;
+
+        .hours {
+            font-weight: 300;
+            font-size: 56px;
+            line-height: 66px;
+            color: $white;
+            padding-bottom: 8px;
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: $blue_pale;
+        }
+
     }
 }
 
