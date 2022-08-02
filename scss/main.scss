@@ -38,22 +38,15 @@ body {
             flex-direction: row;
             justify-content: space-between;
             padding: 29px 35px 24px 30px;
-            background-color: $blue_dark;
             border-radius: 15px;
+            opacity: 1;
 
-            p {
+            h2 {
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 21px;
                 color: $white;
             }
-        }
-
-        h3 {
-            font-weight: 300;
-            font-size: 56px;
-            line-height: 66px;
-            color: $white;
         }
 
     }
@@ -72,24 +65,29 @@ body {
             border-radius: 15px;
             padding: 37px 84px 80px 32px;
 
-            img {
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                padding-bottom: 43px;
+            .profile_image {
+                img {
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    padding-bottom: 43px;
+                }
             }
 
-            h1 {
-                font-weight: 300;
-                font-size: 40px;
-                line-height: 47px;
-                color: $white;
-            }
+            .profile_description {
 
-            span {
-                padding: 43px auto 3px auto;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 18px;
-                color: $blue_pale;
+                h1 {
+                    font-weight: 300;
+                    font-size: 40px;
+                    line-height: 47px;
+                    color: $white;
+                }
+
+                span {
+                    padding: 43px auto 3px auto;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $blue_pale;
+                }
             }
         }
 
@@ -98,7 +96,7 @@ body {
             height: 106px;
             padding: 26px 155px 33px 32px;
 
-            .frequency__option {
+            .frequency {
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 21px;
@@ -119,7 +117,7 @@ body {
     }
 
 
-    .box1 {
+    .box_work {
         background-image: url(../images/icon-work.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -127,7 +125,7 @@ body {
         border-radius: 20px;
     }
 
-    .box2 {
+    .box_play {
         background-image: url(../images/icon-play.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -135,7 +133,7 @@ body {
         border-radius: 20px;
     }
 
-    .box3 {
+    .box_study {
         background-image: url(../images/icon-study.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -143,7 +141,7 @@ body {
         border-radius: 20px;
     }
 
-    .box4 {
+    .box_exercise {
         background-image: url(../images/icon-exercise.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -151,7 +149,7 @@ body {
         border-radius: 20px;
     }
 
-    .box5 {
+    .box_social {
         background-image: url(../images/icon-social.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -159,7 +157,7 @@ body {
         border-radius: 20px;
     }
 
-    .box6 {
+    .box_selfcare {
         background-image: url(../images/icon-self-care.svg);
         background-repeat: no-repeat;
         background-position: top right;
@@ -167,25 +165,32 @@ body {
         border-radius: 20px;
     }
 
+    .box {
 
-    .time {
-        padding-left: 32px;
-
-        .hours {
-            font-weight: 300;
-            font-size: 56px;
-            line-height: 66px;
-            color: $white;
-            padding-bottom: 8px;
+        &:hover {
+            cursor: pointer;
+            background-color: $blue_hover;
         }
 
-        .description {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 18px;
-            color: $blue_pale;
-        }
+        .time {
+            padding-left: 32px;
 
+            h3 {
+                font-weight: 300;
+                font-size: 56px;
+                line-height: 66px;
+                color: $white;
+                padding-bottom: 8px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $blue_pale;
+            }
+
+        }
     }
 }
 
@@ -197,4 +202,119 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1024px) {
+    .grid_container {
+        display: flex;
+        flex-direction: column;
+        grid-column-gap: 0;
+        grid-row-gap: 24px;
+
+        .box {
+            width: 327px;
+            height: 122px;
+            margin-top: 38px;
+            margin-bottom: 0;
+            padding: 28px 24px;
+
+            .title {
+                padding: 0;
+            }
+
+        }
+
+        .box_big {
+            order: 1;
+            height: auto;
+
+            .name_container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 327px;
+                height: auto;
+                padding: 35px;
+
+                .profile_image {
+                    img {
+                        width: 64px;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .profile_description {
+                    h1 {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+
+                    span {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .frequency_container {
+                width: 327px;
+                height: 70px;
+
+                ul {
+                    display: flex;
+                }
+
+                .frequency {
+                    padding-right: 43px;
+                }
+            }
+        }
+
+        .box_work {
+            order: 2;
+            border-radius: 15px;
+        }
+
+        .box_play {
+            order: 3;
+            border-radius: 15px;
+        }
+
+        .box_study {
+            order: 4;
+            border-radius: 15px;
+        }
+
+        .box_exercise {
+            order: 5;
+            border-radius: 15px;
+        }
+
+        .box_social {
+            order: 6;
+            border-radius: 15px;
+        }
+
+        .box_selfcare {
+            order: 7;
+            border-radius: 15px;
+        }
+
+        .box {
+
+            .time {
+                padding-top: 6px;
+                padding-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h3 {
+                    font-size: 32px;
+                    line-height: 38px;
+                    padding-bottom: 0
+                }
+
+            }
+        }
+    }
 }
